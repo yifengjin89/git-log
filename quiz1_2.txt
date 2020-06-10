@@ -1,0 +1,28 @@
+1. generate : touch a.txt;  touch a.bak; touch a.py;  and we can use 'touch' to generate more txt, bak, py files
+2. change txt file name:
+
+for file in 'ls. *.txt﻿'
+
+do
+
+    mv $file new_${file}
+     echo moving $file to new_${file}
+done
+
+3.  rm -rf  *.bak
+4. for file in 'ls *.py'
+do
+
+c='cat $file|wc -l'
+if test $c -ge 10
+then
+
+mv "$file" "long_${file}"
+else
+
+mv "$file" "short_${file}"
+fi
+
+done
+
+﻿﻿
